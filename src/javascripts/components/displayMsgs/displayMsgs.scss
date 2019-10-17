@@ -1,0 +1,28 @@
+.messageCard{
+    background-color: #FAD4A7;
+    border: 2px solid #769231;
+    border-radius: 10px;
+    margin: 10px;
+
+    .modifyMsg{
+        color: #769231;
+        border-left: 2px solid #769231;
+
+        button{
+            background-color: transparent;
+            border: none;
+            color: #769231;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+    
+    .msgDetails{
+        border-right: 2px solid #769231;
+
+        .timeStamp{
+            color: #769231;
+        }
+    }
+}
+
