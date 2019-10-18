@@ -11,16 +11,14 @@
         color: $froggyGreen;
         border-left: 2px solid $froggyGreen;
 
-        .delete{
+        button{
             background-color: transparent;
             border: none;
             color: $froggyGreen;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        .edit{
-            height: 100%;
+            &.delete{
+                font-size: 1.5em;
+                font-weight: bold;
+            }
         }
     }
     
@@ -30,7 +28,6 @@
         .user{
             font-family: 'Mitr', 'Ubuntu', sans-serif;
             font-size: 1.5em;
-            margin: 1em;
         }
 
         .timeStamp{
