@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import displayMsgs from '../displayMsgs/displayMsgs';
 import messageData from '../../helpers/data/messageData';
+import utilities from '../../helpers/utilities';
 
 import './addMsg.scss';
 
@@ -12,6 +13,7 @@ const addMessage = (e) => {
     newMsgObj.timeStamp = $.now();
     const newArr = messageData.getMessage();
     newArr.unshift(newMsgObj);
+    utilities.toggleClearButton(newArr);
     displayMsgs.displayMessages(newArr);
   }
 };
