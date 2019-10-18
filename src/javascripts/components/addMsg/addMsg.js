@@ -1,24 +1,25 @@
 import $ from 'jquery';
-// import displayMsgs from '../displayMsgs/displayMsgs';
-// import messageData from '../../helpers/data/messageData';
+import displayMsgs from '../displayMsgs/displayMsgs';
+import messageData from '../../helpers/data/messageData';
 
 import './addMsg.scss';
 
 const addMessage = (e) => {
   if (e.which === 13) {
-    console.log(e);
-    console.log('work!');
+    // console.log(e);
+    const newMsgObj = {};
+    newMsgObj.name = $('#username').val();
+    newMsgObj.message = $('#message').val();
+    newMsgObj.timeStamp = e.timestamp;
+    const newArr = messageData.getMessage();
+    newArr.unshift(newMsgObj);
+    console.log(newArr);
+    displayMsgs.displayMessages(newArr);
   }
-  /* const newMsgObj = {};
-  newMsgObj.name = $('#username').val();
-  newMsgObj.message = $('#message').val();
-  newMsgObj.timeStamp = e.timestamp;
-  messageData.getMessage.push(newMsgObj);
-  displayMsgs.displayMessages(messageData.getMessage); */
 };
 
 const addMsgEvent = () => {
-  $('#message').keypress(addMessage);
+  $('body').keypress(addMessage);
   console.log('work!');
 };
 
