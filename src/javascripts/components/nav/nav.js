@@ -1,11 +1,12 @@
-import prinToDom from '';
+import utilities from '../../helpers/utilities';
+import './nav.scss';
 
 const printNav = () => {
   let domString = '';
-      domstring = `
-      <nav class="navbar navbar-light bg-light fixed">
+  domString = `
+      <nav class="navbar fixed">
         <div class="col-2">
-          <img src="#" alt="">
+          <img id="navImg" src="/src/assets/images/toadtalk.png" alt="ToadTalk Logo">
         </div>
         <div class="col-10">
         <form>
@@ -30,7 +31,7 @@ const printNav = () => {
         </div>  
       </nav>
       `;
-//insert the printToDom
+  utilities.printToDom('messageBar', domString);
 };
 
 export default { printNav };

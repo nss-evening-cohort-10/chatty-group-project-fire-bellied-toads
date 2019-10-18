@@ -1,0 +1,38 @@
+@import '../../../styles/colors';
+
+.messageCard{
+    background-color: $lightOrange;
+    border: 2px solid $froggyGreen;
+    border-radius: 10px;
+    font-family: 'Monserrat', 'Ubuntu', sans-serif;
+    margin: 10px;
+
+    .modifyMsg{
+        color: $froggyGreen;
+        border-left: 2px solid $froggyGreen;
+
+        button{
+            background-color: transparent;
+            border: none;
+            color: $froggyGreen;
+            &.delete{
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .msgDetails{
+        border-right: 2px solid $froggyGreen;
+
+        .user{
+            font-family: 'Mitr', 'Ubuntu', sans-serif;
+            font-size: 1.5em;
+        }
+
+        .timeStamp{
+            color: $froggyGreen;
+        }
+    }
+}
+
