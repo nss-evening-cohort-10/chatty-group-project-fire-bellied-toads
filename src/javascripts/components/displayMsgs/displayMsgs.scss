@@ -1,27 +1,40 @@
+@import '../../../styles/colors';
+
 .messageCard{
-    background-color: #FAD4A7;
-    border: 2px solid #769231;
+    background-color: $lightOrange;
+    border: 2px solid $froggyGreen;
     border-radius: 10px;
+    font-family: 'Monserrat', 'Ubuntu', sans-serif;
     margin: 10px;
 
     .modifyMsg{
-        color: #769231;
-        border-left: 2px solid #769231;
+        color: $froggyGreen;
+        border-left: 2px solid $froggyGreen;
 
-        button{
+        .delete{
             background-color: transparent;
             border: none;
-            color: #769231;
+            color: $froggyGreen;
             font-size: 1.5em;
             font-weight: bold;
+        }
+
+        .edit{
+            height: 100%;
         }
     }
     
     .msgDetails{
-        border-right: 2px solid #769231;
+        border-right: 2px solid $froggyGreen;
+
+        .user{
+            font-family: 'Mitr', 'Ubuntu', sans-serif;
+            font-size: 1.5em;
+            margin: 1em;
+        }
 
         .timeStamp{
-            color: #769231;
+            color: $froggyGreen;
         }
     }
 }
