@@ -1,6 +1,7 @@
 import 'bootstrap';
 import '@fortawesome/fontawesome-free/js/all';
 import '../styles/main.scss';
+import add from './components/addMsg/addMsg';
 import nav from './components/nav/nav';
 import data from './helpers/data/messageData';
 import display from './components/displayMsgs/displayMsgs';
@@ -11,6 +12,7 @@ const msgArray = data.getMessage();
 const init = () => {
   nav.printNav();
   display.displayMessages(msgArray);
+  add.addMsgEvent();
   deleteMsg.deleteMessage();
 };
 
