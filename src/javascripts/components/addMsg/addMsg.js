@@ -5,22 +5,20 @@ import messageData from '../../helpers/data/messageData';
 import './addMsg.scss';
 
 const addMessage = (e) => {
-  if (e.which === 13) {
-    // console.log(e);
+  if (e.which === 13 || e.target.id === 'sendBtn') {
     const newMsgObj = {};
     newMsgObj.name = $('#username').val();
     newMsgObj.message = $('#message').val();
-    newMsgObj.timeStamp = e.timestamp;
+    newMsgObj.timeStamp = $.now();
     const newArr = messageData.getMessage();
     newArr.unshift(newMsgObj);
-    console.log(newArr);
     displayMsgs.displayMessages(newArr);
   }
 };
 
 const addMsgEvent = () => {
   $('body').keypress(addMessage);
-  console.log('work!');
+  $('body').click(addMessage);
 };
 
 export default { addMsgEvent };
