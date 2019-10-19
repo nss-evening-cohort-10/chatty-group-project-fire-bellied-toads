@@ -1,15 +1,21 @@
 const messageArr = [
   {
     name: 'Joe',
-    message: `replace with seed data this is a very long message this is a very long message this is a very long message this is a very long 
-    message this is a very long message this is a very long message this is a very long message this is a very long message this is a very long 
-    message this is a very long message this is a very long message this is a very long message this is a very long message this is a very long 
-    message this is a very long message this is a very long message this is a very long message this is a very long message this is a very long 
-    message this is a very long message this is a very long message this is a very long message this is a very long message `,
+    message: 'Hey guys, I have a question about fire bellied toads',
     timeStamp: '16 Oct 2019',
   },
   {
     name: 'Jane',
+    message: 'replace with seed data',
+    timeStamp: '16 Oct 2019',
+  },
+  {
+    name: 'Jose',
+    message: 'replace with seed data',
+    timeStamp: '16 Oct 2019',
+  },
+  {
+    name: 'Jose',
     message: 'replace with seed data',
     timeStamp: '16 Oct 2019',
   },
