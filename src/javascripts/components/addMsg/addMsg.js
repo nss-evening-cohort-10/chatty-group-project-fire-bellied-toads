@@ -4,8 +4,6 @@ import displayMsgs from '../displayMsgs/displayMsgs';
 import messageData from '../../helpers/data/messageData';
 import utilities from '../../helpers/utilities';
 
-import './addMsg.scss';
-
 const clearForm = () => {
   $('#username').val('');
   $('#message').val('');
