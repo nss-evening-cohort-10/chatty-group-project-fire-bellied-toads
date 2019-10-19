@@ -5,6 +5,17 @@ import display from '../displayMsgs/displayMsgs';
 const restoreForm = () => {
   $('#username').show().prop('required', true);
   $('#message').val('');
+  $('#updateBtn').remove();
+  $('#toggleSend').append('<button type="submit" id="sendBtn" class="btn btn-dark col-2">SEND</button>');
+};
+
+const updateMsg = (seq) => {
+  const messageArr = messageData.getMessage();
+  messageArr[seq].message = $('#message').val();
+  display.displayMessages(messageArr);
+  setTimeout(() => {
+    restoreForm();
+  }, 50);
 };
 
 const editMsg = (e) => {
@@ -14,14 +25,10 @@ const editMsg = (e) => {
   const editSeq = parseInt(splitId[1], 0);
   const toEdit = messageArr[editSeq].message;
   $('#message').val(toEdit);
-  $('#sendBtn').html('Update').attr('id', 'updateBtn');
+  $('#sendBtn').remove();
   $('#username').hide().prop('required', false);
-  $('#updateBtn').click(() => {
-    messageArr[editSeq].message = $('#message').val();
-    display.displayMessages(messageArr);
-    $('#updateBtn').html('Send').attr('id', 'sendBtn');
-    setTimeout(restoreForm, 50);
-  });
+  $('#toggleSend').append('<button type="submit" id="updateBtn" class="btn btn-dark col-2">Update</button>');
+  $('#updateBtn').click(() => updateMsg(editSeq));
 };
 
 const editMsgEvent = () => {

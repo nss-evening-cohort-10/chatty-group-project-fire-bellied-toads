@@ -13,7 +13,7 @@ const makeMessage = (msg, counter) => {
       </div>
       <div class='modifyMsg row col-1'>
         <button type='button' id='del${counter}' class='col-md-5 delete offset-md-1'>X</button>
-        <button type='button' id='edit${counter}' class='edit col-md-5'><i class='fas fa-pencil-alt edit'></i></button>
+        <button type='button' id='edit${counter}' class='edit col-md-5'><i class='fas fa-pencil-alt'></i></button>
       </div>
     </div>
   `;
