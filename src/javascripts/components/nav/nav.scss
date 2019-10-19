@@ -26,9 +26,41 @@ nav{
     margin-right: 1.5em;
   }
 
-  #clearBtn {
+  #clearBtn, #sendBtn {
     position: absolute;
     right: 0;
   }
 
+}
+
+@media screen and (max-width: 715px){
+  .navbar{   
+    button{
+      font-size: .75rem!important;
+    }
+  }
+}
+
+@media screen and (max-width: 413px){
+  .navbar{ 
+    #logoDiv{
+      min-width: 75vw!important;
+      margin: 0 auto;
+      padding-bottom: 5px;
+    }
+
+    #formDiv{
+      min-width: 80vw!important;
+      margin: 0 auto;
+    }
+
+    button{
+      font-size: .5rem!important;
+      
+      &#sendBtn, &#updateBtn{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 }
