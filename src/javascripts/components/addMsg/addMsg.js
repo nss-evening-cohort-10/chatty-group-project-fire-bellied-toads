@@ -3,6 +3,7 @@ import moment from 'moment';
 import displayMsgs from '../displayMsgs/displayMsgs';
 import messageData from '../../helpers/data/messageData';
 import utilities from '../../helpers/utilities';
+import ribbet from '../ribbet/ribbet';
 
 const clearForm = () => {
   $('#username').val('');
@@ -21,6 +22,7 @@ const addMessage = (e) => {
       utilities.toggleClearButton(newArr);
       displayMsgs.displayMessages(newArr);
       setTimeout(clearForm, 100);
+      ribbet.ribbet();
     }
   }
 };

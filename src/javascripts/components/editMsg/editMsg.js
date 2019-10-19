@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import messageData from '../../helpers/data/messageData';
 import display from '../displayMsgs/displayMsgs';
+import ribbet from '../ribbet/ribbet';
 
 const restoreForm = () => {
   $('#username').show().prop('required', true);
@@ -10,6 +11,7 @@ const restoreForm = () => {
 };
 
 const updateMsg = (seq) => {
+  ribbet.ribbet();
   const messageArr = messageData.getMessage();
   messageArr[seq].message = $('#message').val();
   display.displayMessages(messageArr);
