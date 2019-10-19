@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const messageArr = [
   {
     name: 'Joe',
@@ -6,17 +8,17 @@ const messageArr = [
     message this is a very long message this is a very long message this is a very long message this is a very long message this is a very long 
     message this is a very long message this is a very long message this is a very long message this is a very long message this is a very long 
     message this is a very long message this is a very long message this is a very long message this is a very long message `,
-    timeStamp: '16 Oct 2019',
+    timeStamp: moment().format('llll'),
   },
   {
     name: 'Jane',
     message: 'replace with seed data',
-    timeStamp: '16 Oct 2019',
+    timeStamp: moment().format('llll'),
   },
   {
     name: 'Jose',
     message: 'replace with seed data',
-    timeStamp: '16 Oct 2019',
+    timeStamp: moment().format('llll'),
   },
 ];
 
