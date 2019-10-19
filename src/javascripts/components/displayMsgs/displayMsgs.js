@@ -5,16 +5,16 @@ import textSize from '../textSize/textSize';
 const makeMessage = (msg, counter) => {
   const msgString = `
     <div class='messageCard row d-flex'>
-      <div class='msgDetails text-center col-sm-2 col-4'>
+      <div class='msgDetails text-center col-sm-3 col-4'>
         <h4 class='user m-sm-4'>${msg[counter].name}</h4>
         <p class='timeStamp'>${msg[counter].timeStamp}</p>
       </div>
       <div class='msgBody col-sm-8 col-6'>
         <p>${msg[counter].message}</p>
       </div>
-      <div class='modifyMsg row col-2'>
-        <button type='button' id='del${counter}' class='col-md-4 delete offset-md-1'>X</button>
-        <button type='button' class='edit col-md-4 offset-md-2'><i id='edit${counter}' class='fas fa-pencil-alt edit'></i></button>
+      <div class='modifyMsg row col-1'>
+        <button type='button' id='del${counter}' class='col-md-5 delete offset-md-1'>X</button>
+        <button type='button' id='edit${counter}' class='edit col-md-5'><i class='fas fa-pencil-alt'></i></button>
       </div>
     </div>
   `;

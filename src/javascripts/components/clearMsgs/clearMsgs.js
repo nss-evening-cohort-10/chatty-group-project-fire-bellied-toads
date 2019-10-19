@@ -13,7 +13,7 @@ const clearMessages = (e) => {
 };
 
 const addClearEvent = () => {
-  $('body').click(clearMessages);
+  $('body').on('click', '#clearBtn', clearMessages);
 };
 
 export default { addClearEvent };

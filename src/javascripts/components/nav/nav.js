@@ -10,7 +10,7 @@ const printNav = () => {
         </div>
         <div class="col-10">
         <form onsubmit='return false'>
-          <div class="form-group row">
+          <div id='toggleSend' class="form-group row">
             <input type="text" class="form-control col-10" id="message" placeholder="What's on your mind?" required>
             <button type="submit" id="sendBtn" class="btn btn-dark col-2">SEND</button>
           </div>

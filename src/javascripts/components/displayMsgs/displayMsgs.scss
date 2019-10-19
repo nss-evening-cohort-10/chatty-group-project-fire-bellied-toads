@@ -9,8 +9,10 @@
     color: var(--font-color);
 
     .modifyMsg{
+
         color: var(--primary-color);
         border-left: 2px solid var(--primary-color);
+        padding: 0;
 
         button{
             background-color: transparent;
