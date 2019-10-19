@@ -22,8 +22,8 @@ const printNav = () => {
               <label class="custom-control-label" for="darkMode"><i class="fas fa-cloud-moon icon" alt="dark mode"></i></label>
             </div>
             <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="textHeight">
-              <label class="custom-control-label" for="textHeight"><i class="fas fa-text-height icon" alt="enlarge text"></i></label>
+              <input type="checkbox" class="custom-control-input" id="textSize">
+              <label class="custom-control-label" for="textSize"><i class="fas fa-text-height icon" alt="enlarge text"></i></label>
             </div>
             <button type="button" id="clearBtn" class="btn btn-outline-dark col-2">CLEAR</button>
           </div>
