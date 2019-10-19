@@ -8,6 +8,8 @@ import clear from './components/clearMsgs/clearMsgs';
 import data from './helpers/data/messageData';
 import display from './components/displayMsgs/displayMsgs';
 import deleteMsg from './components/deleteMsgs/deleteMsg';
+import darkMode from './components/darkMode/darkMode';
+import textSize from './components/textSize/textSize';
 
 const msgArray = data.getMessage();
 
@@ -18,6 +20,8 @@ const init = () => {
   edit.editMsgEvent();
   deleteMsg.deleteMessage();
   clear.addClearEvent();
+  darkMode.makeDark();
+  textSize.makeBig();
 };
 
 init();

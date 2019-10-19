@@ -1,9 +1,34 @@
 @import '../../../styles/colors';
 
 nav{
-  background-color: $lightOrange !important;
+  background-color: var(--heading-color);
   box-shadow: 2px 1px 1px rgba($color: #000000, $alpha: .5);
   img {
     width:100% !important;
   }
+
+  .custom-control-label::before{
+    background-color: $darkLightGreen;
+    border: $froggyGreen solid 1px;
+  }
+
+  .custom-switch .custom-control-label::after {
+    background-color: $froggyGreen;
+  }
+
+  .custom-switch .custom-control-input:checked~.custom-control-label::before{
+    background-color:black;
+    border: $darkLightGreen solid 1px;
+  }
+
+  .icon {
+    color: var(--heading-icons);
+    margin-right: 1.5em;
+  }
+
+  #clearBtn {
+    position: absolute;
+    right: 0;
+  }
+
 }
