@@ -1,5 +1,9 @@
 @import '../../../styles/colors';
 
+#msgDiv{
+    margin-top: 21vh;
+}
+
 .messageCard{
     background-color: var(--secondary-color);
     border: 2px solid var(--primary-color);
@@ -39,3 +43,28 @@
     }
 }
 
+@media screen and (max-width: 767px){
+    .messageCard{
+        .modifyMsg{
+            border-left: none;
+            border-top: 2px solid var(--primary-color);
+            margin-left: 0;
+        }
+        .msgDetails{
+            border-right: none;
+            border-bottom: 2px solid var(--primary-color);
+        }
+    }
+}
+
+@media screen and (max-height: 678px){
+    #msgDiv{
+        margin-top: 30vh;
+    }
+
+    @media screen and (min-width: 400px){
+        #msgDiv{
+            margin-top: 40vh;
+        }
+    }
+}

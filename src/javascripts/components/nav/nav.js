@@ -4,7 +4,7 @@ import './nav.scss';
 const printNav = () => {
   let domString = '';
   domString = `
-      <nav class="navbar fixed">
+      <nav class="navbar fixed-top">
         <div class="col-2">
           <img id="navImg" src="/src/assets/images/toadtalk.png" alt="ToadTalk Logo">
         </div>
