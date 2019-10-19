@@ -7,6 +7,7 @@ import clear from './components/clearMsgs/clearMsgs';
 import data from './helpers/data/messageData';
 import display from './components/displayMsgs/displayMsgs';
 import deleteMsg from './components/deleteMsgs/deleteMsg';
+import darkMode from './components/darkMode/darkMode';
 
 const msgArray = data.getMessage();
 
@@ -16,6 +17,7 @@ const init = () => {
   add.addMsgEvent();
   deleteMsg.deleteMessage();
   clear.addClearEvent();
+  darkMode.makeDark();
 };
 
 init();
