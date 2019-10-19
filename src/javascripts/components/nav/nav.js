@@ -9,13 +9,13 @@ const printNav = () => {
           <img id="navImg" src="/src/assets/images/toadtalk.png" alt="ToadTalk Logo">
         </div>
         <div class="col-10">
-        <form>
+        <form onsubmit='return false'>
           <div class="form-group row">
-            <input type="text" class="form-control col-10" id="message" placeholder="What's on your mind?">
-            <button type="button" id="sendBtn" class="btn btn-dark col-2">SEND</button>
+            <input type="text" class="form-control col-10" id="message" placeholder="What's on your mind?" required>
+            <button type="submit" id="sendBtn" class="btn btn-dark col-2">SEND</button>
           </div>
           <div class="form-group row">
-            <input type="text" class="form-control col-6" id="username" placeholder="Username">
+            <input type="text" class="form-control col-6" id="username" placeholder="Username" required>
             <div class="col-2"></div>
             <div class="form-group form-check col-1">
               <label class="form-check-label" for="darkMode"><i class="fas fa-cloud-moon"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
