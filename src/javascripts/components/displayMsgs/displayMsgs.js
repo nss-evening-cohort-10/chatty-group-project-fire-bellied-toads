@@ -21,7 +21,7 @@ const makeMessage = (msg, counter) => {
 };
 
 const displayMessages = (messages) => {
-  let msgString;
+  let msgString = '';
   if (messages.length <= 20) {
     for (let i = 0; i < messages.length; i += 1) {
       msgString += makeMessage(messages, i);
