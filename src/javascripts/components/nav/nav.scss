@@ -6,4 +6,20 @@ nav{
   img {
     width:100% !important;
   }
+
+  .custom-control-label::before{
+    background-color: $froggyGreen;
+    border: $darkOrange solid 1px;
+  }
+
+  .custom-switch .custom-control-label::after {
+    background-color: $darkLightGreen;
+  }
+
+  .custom-switch .custom-control-input:checked~.custom-control-label::before{
+    background-color:black;
+    border: $darkLightGreen solid 1px;
+  }
+
+
 }

@@ -17,10 +17,10 @@ const printNav = () => {
           <div class="form-group row">
             <input type="text" class="form-control col-6" id="username" placeholder="Username" required>
             <div class="col-2"></div>
-            <div class="form-group form-check col-1">
-              <label class="form-check-label" for="darkMode"><i class="fas fa-cloud-moon"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-              <input type="checkbox" class="form-check-input" id="darkMode">
-            </div>  
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="darkMode">
+              <label class="custom-control-label" for="darkMode"><i class="fas fa-cloud-moon" alt="dark mode"></i></label>
+            </div>
             <div class="form-group form-check col-1">
               <label class="form-check-label" for="textHeight"><i class="fas fa-text-height"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
               <input type="checkbox" class="form-check-input" id="textHeight">
