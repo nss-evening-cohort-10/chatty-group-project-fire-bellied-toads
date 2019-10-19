@@ -1,5 +1,6 @@
 import './displayMsgs.scss';
 import utilities from '../../helpers/utilities';
+import textSize from '../textSize/textSize';
 
 const makeMessage = (msg, counter) => {
   const msgString = `
@@ -32,6 +33,7 @@ const displayMessages = (messages) => {
     }
   }
   utilities.printToDom('msgDiv', msgString);
+  textSize.enlarge();
 };
 
 export default { displayMessages };

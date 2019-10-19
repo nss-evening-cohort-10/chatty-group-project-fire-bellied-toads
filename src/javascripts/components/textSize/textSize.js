@@ -1,16 +1,19 @@
 import './textSize.scss';
 import $ from 'jquery';
 
+const enlarge = () => {
+  if ($('#textSize').is(':checked')) {
+    $('p').addClass('enlarge');
+  } else {
+    $('p').removeClass('enlarge');
+  }
+};
+
 const makeBig = () => {
   $('body').on('click', '#textSize', () => {
-    if ($('#textSize').is(':checked')) {
-      $('p').addClass('enlarge');
-      console.log('big');
-    } else {
-      $('p').removeClass('enlarge');
-      console.log('little');
-    }
+    enlarge();
   });
 };
 
-export default { makeBig };
+
+export default { makeBig, enlarge };
