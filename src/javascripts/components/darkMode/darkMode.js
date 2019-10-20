@@ -7,10 +7,14 @@ const makeDark = () => {
       $('body').attr('data-theme', 'dark');
       $('#clearBtn').addClass('btn-outline-light');
       $('#clearBtn').removeClass('btn-outline-dark');
+      $('#navImg2').show();
+      $('#navImg').hide();
     } else {
       $('body').attr('data-theme', 'light');
       $('#clearBtn').addClass('btn-outline-dark');
       $('#clearBtn').removeClass('btn-outline-light');
+      $('#navImg').show();
+      $('#navImg2').hide();
     }
   });
 };

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import './nav.scss';
 
@@ -7,6 +8,7 @@ const printNav = () => {
       <nav class="navbar fixed">
         <div class="col-2">
           <img id="navImg" src="/src/assets/images/toadtalk.png" alt="ToadTalk Logo">
+          <img id="navImg2" src="/src/assets/images/toadTalkDarkMode.png" alt="ToadTalk Logo">
         </div>
         <div class="col-10">
         <form onsubmit='return false'>
@@ -32,6 +34,7 @@ const printNav = () => {
       </nav>
       `;
   utilities.printToDom('messageBar', domString);
+  $('#navImg2').hide();
 };
 
 export default { printNav };
