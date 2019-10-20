@@ -41,8 +41,10 @@ const printNav = () => {
 const logoSwap = () => {
   if ($(window).innerWidth() < 800 && $(window).innerWidth() > 414) {
     $('#navImg').attr('src', '/src/assets/images/toadTalkStacked.png');
+    $('#navImg2').attr('src', '/src/assets/images/toadTalkStackedDarkMode.png');
   } else if ($(window).innerWidth() >= 800 || $(window).innerWidth() <= 414) {
     $('#navImg').attr('src', '/src/assets/images/toadtalk.png');
+    $('#navImg2').attr('src', '/src/assets/images/toadTalkDarkMode.png');
   }
 };
 
