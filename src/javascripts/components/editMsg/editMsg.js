@@ -15,6 +15,7 @@ const updateMsg = (seq) => {
   const messageArr = messageData.getMessage();
   messageArr[seq].message = $('#message').val();
   display.displayMessages(messageArr);
+  $('.edit').show();
   setTimeout(() => {
     restoreForm();
   }, 50);
@@ -30,6 +31,7 @@ const editMsg = (e) => {
   $('#sendBtn').remove();
   $('#username').hide().prop('required', false);
   $('#toggleSend').append('<button type="submit" id="updateBtn" class="btn btn-dark col-2 offset-1">Update</button>');
+  $('.edit').hide();
   $('#updateBtn').click(() => updateMsg(editSeq));
 };
 

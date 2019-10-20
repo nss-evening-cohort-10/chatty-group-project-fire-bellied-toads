@@ -6,7 +6,7 @@ const makeMessage = (msg, counter) => {
   const msgString = `
     <div class='messageCard row d-flex'>
       <div class='msgDetails text-center col-md-3'>
-        <h4 class='user m-md-4'>${msg[counter].name}</h4>
+        <h4 class='user m-lg-4'>${msg[counter].name}</h4>
         <p class='timeStamp'>${msg[counter].timeStamp}</p>
       </div>
       <div class='msgBody col-md-8'>

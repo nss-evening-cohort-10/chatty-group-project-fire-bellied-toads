@@ -16,6 +16,7 @@ const msgArray = data.getMessage();
 
 const init = () => {
   nav.printNav();
+  nav.logoSwapEvent();
   display.displayMessages(msgArray);
   add.addMsgEvent();
   edit.editMsgEvent();

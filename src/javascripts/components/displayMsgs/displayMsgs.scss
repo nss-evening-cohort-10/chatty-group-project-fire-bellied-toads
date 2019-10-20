@@ -35,6 +35,8 @@
         .user{
             font-family: 'Mitr', 'Ubuntu', sans-serif;
             font-size: 1.5em;
+            max-width: 100%;
+            overflow-x: auto;
         }
 
         .timeStamp{
@@ -57,14 +59,20 @@
     }
 }
 
-@media screen and (max-height: 678px){
+@media screen and (max-height: 823px){
     #msgDiv{
-        margin-top: 30vh;
+        margin-top: 34vh;
     }
 
-    @media screen and (min-width: 400px){
+    @media screen and (max-height: 678px){
         #msgDiv{
             margin-top: 40vh;
+        }
+
+        @media screen and (min-width: 400px){
+            #msgDiv{
+                margin-top: 43vh;
+            }
         }
     }
 }

@@ -26,9 +26,17 @@ nav{
     margin-right: 1.5em;
   }
 
+  #formRow2{
+    margin-left: -15px;
+  }
+
+  #username{
+    padding-left: 12px;
+  }
+
   #clearBtn, #sendBtn {
     position: absolute;
-    right: 0;
+    right: 5px;
   }
 
 }
@@ -41,7 +49,7 @@ nav{
   }
 }
 
-@media screen and (max-width: 413px){
+@media screen and (max-width: 414px){
   .navbar{ 
     #logoDiv{
       min-width: 75vw!important;

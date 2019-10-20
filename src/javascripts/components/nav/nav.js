@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import './nav.scss';
 
@@ -14,7 +15,7 @@ const printNav = () => {
             <input type="text" class="form-control col-9" id="message" placeholder="What's on your mind?" required>
             <button type="submit" id="sendBtn" class="btn btn-dark col-2 offset-sm-1">SEND</button>
           </div>
-          <div class="form-group row no-gutters">
+          <div id='formRow2' class="form-group row no-gutters">
             <input type="text" class="form-control col-6" id="username" placeholder="Username" required>
             <div id='switchDiv' class='row d-flex flex-wrap col-3 offset-1'>
               <div class="custom-control custom-switch">
@@ -35,4 +36,17 @@ const printNav = () => {
   utilities.printToDom('messageBar', domString);
 };
 
-export default { printNav };
+const logoSwap = () => {
+  if ($(window).innerWidth() < 800 && $(window).innerWidth() > 414) {
+    $('#navImg').attr('src', '/src/assets/images/toadTalkStacked.png');
+  } else if ($(window).innerWidth() >= 800 || $(window).innerWidth() <= 414) {
+    $('#navImg').attr('src', '/src/assets/images/toadtalk.png');
+  }
+};
+
+const logoSwapEvent = () => {
+  $(document).ready(logoSwap);
+  $(window).resize(logoSwap);
+};
+
+export default { printNav, logoSwapEvent };
