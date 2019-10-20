@@ -26,7 +26,12 @@ nav{
     margin-right: 1.5em;
   }
 
+  #toggleSend{
+    margin-bottom: 5px;
+  }
+
   #formRow2{
+    margin-bottom: 8px;
     margin-left: -15px;
   }
 
@@ -37,6 +42,18 @@ nav{
   #clearBtn, #sendBtn {
     position: absolute;
     right: 5px;
+  }
+
+  #gifBtnDiv{
+    padding-left: 0;
+
+    #gifBtn{
+      background-color: white;
+
+      &:hover{
+        background-color: #6c757d;
+      }
+    }
   }
 
 }

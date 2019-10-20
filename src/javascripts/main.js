@@ -9,6 +9,7 @@ import data from './helpers/data/messageData';
 import display from './components/displayMsgs/displayMsgs';
 import deleteMsg from './components/deleteMsgs/deleteMsg';
 import darkMode from './components/darkMode/darkMode';
+import gifs from './components/addGifs/gifSelector';
 import textSize from './components/textSize/textSize';
 import ribbet from './components/ribbet/ribbet';
 
@@ -18,6 +19,7 @@ const init = () => {
   nav.printNav();
   nav.logoSwapEvent();
   display.displayMessages(msgArray);
+  gifs.printModal();
   add.addMsgEvent();
   edit.editMsgEvent();
   deleteMsg.deleteMessage();
