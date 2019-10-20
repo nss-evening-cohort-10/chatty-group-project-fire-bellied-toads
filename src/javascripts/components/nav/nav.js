@@ -8,6 +8,7 @@ const printNav = () => {
       <nav class="navbar fixed-top row d-flex flex-wrap">
         <div id='logoDiv' class="col-2">
           <img id="navImg" src="/src/assets/images/toadtalk.png" alt="ToadTalk Logo">
+          <img id="navImg2" src="/src/assets/images/toadTalkDarkMode.png" alt="ToadTalk Logo">
         </div>
         <div id='formDiv' class="col-10">
         <form onsubmit='return false'>
@@ -34,6 +35,7 @@ const printNav = () => {
       </nav>
       `;
   utilities.printToDom('messageBar', domString);
+  $('#navImg2').hide();
 };
 
 const logoSwap = () => {
