@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import moment from 'moment';
 import displayMsgs from '../displayMsgs/displayMsgs';
+import gif from '../addGifs/gifSelector';
 import messageData from '../../helpers/data/messageData';
 import utilities from '../../helpers/utilities';
 import ribbet from '../ribbet/ribbet';
@@ -8,6 +9,8 @@ import ribbet from '../ribbet/ribbet';
 const clearForm = () => {
   $('#username').val('');
   $('#message').val('');
+  $('#gifBtn').show();
+  $('#gifAttached').hide();
 };
 
 const addMessage = (e) => {
@@ -17,6 +20,7 @@ const addMessage = (e) => {
       newMsgObj.name = $('#username').val();
       newMsgObj.message = $('#message').val();
       newMsgObj.timeStamp = moment().format('llll');
+      newMsgObj.gif = gif.getGif();
       const newArr = messageData.getMessage();
       newArr.unshift(newMsgObj);
       utilities.toggleClearButton(newArr);

@@ -7,7 +7,7 @@ const restoreForm = () => {
   $('#username').show().prop('required', true);
   $('#message').val('');
   $('#updateBtn').remove();
-  $('#toggleSend').append('<button type="submit" id="sendBtn" class="btn btn-dark col-2 offset-1">SEND</button>');
+  $('#toggleSend').append('<button type="submit" id="sendBtn" class="btn btn-dark col-2">SEND</button>');
 };
 
 const updateMsg = (seq) => {
@@ -30,7 +30,7 @@ const editMsg = (e) => {
   $('#message').val(toEdit);
   $('#sendBtn').remove();
   $('#username').hide().prop('required', false);
-  $('#toggleSend').append('<button type="submit" id="updateBtn" class="btn btn-dark col-2 offset-1">Update</button>');
+  $('#toggleSend').append('<button type="submit" id="updateBtn" class="btn btn-dark col-2">Update</button>');
   $('.edit').hide();
   $('#updateBtn').click(() => updateMsg(editSeq));
 };

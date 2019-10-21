@@ -16,7 +16,8 @@ const printNav = () => {
             <div class="input-group mb-3">
               <input type="text" class="form-control col-7" id="message" placeholder="What's on your mind?" required>
               <div id='gifBtnDiv' class="input-group-append col-lg-2 col-3">
-                <button type="button" id='gifBtn' class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">Search Gifs</button>
+                <button type="button" id='gifBtn' class="btn btn-outline-secondary" data-toggle="modal" data-target="#giphyModal">Search Gifs</button>
+                <button type="button" id='gifAttached' class="btn btn-success">Gif Attached</button>
               </div>
             </div>
             <button type="submit" id="sendBtn" class="btn btn-dark col-2">SEND</button>
