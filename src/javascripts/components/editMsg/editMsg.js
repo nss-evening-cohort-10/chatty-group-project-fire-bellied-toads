@@ -5,6 +5,7 @@ import ribbet from '../ribbet/ribbet';
 
 const restoreForm = () => {
   $('#username').show().prop('required', true);
+  $('#gifBtn').show();
   $('#message').val('');
   $('#updateBtn').remove();
   $('#toggleSend').append('<button type="submit" id="sendBtn" class="btn btn-dark col-2">SEND</button>');
@@ -30,6 +31,7 @@ const editMsg = (e) => {
   $('#message').val(toEdit);
   $('#sendBtn').remove();
   $('#username').hide().prop('required', false);
+  $('#gifBtn').hide();
   $('#toggleSend').append('<button type="submit" id="updateBtn" class="btn btn-dark col-2">Update</button>');
   $('.edit').hide();
   $('#updateBtn').click(() => updateMsg(editSeq));

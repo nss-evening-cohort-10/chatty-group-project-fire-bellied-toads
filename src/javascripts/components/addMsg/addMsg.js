@@ -8,14 +8,15 @@ import ribbet from '../ribbet/ribbet';
 
 const clearForm = () => {
   $('#username').val('');
-  $('#message').val('');
+  $('#message').val('').prop('required', true);
   $('#gifBtn').show();
   $('#gifAttached').hide();
+  gif.clearGif();
 };
 
 const addMessage = (e) => {
   if (e.which === 13 || e.target.id === 'sendBtn') {
-    if ($('#username').val() !== '' && $('#message').val() !== '') {
+    if (($('#username').val() !== '' && $('#message').val() !== '') || ($('#username').val() !== '' && gif.getGif() !== '')) {
       const newMsgObj = {};
       newMsgObj.name = $('#username').val();
       newMsgObj.message = $('#message').val();

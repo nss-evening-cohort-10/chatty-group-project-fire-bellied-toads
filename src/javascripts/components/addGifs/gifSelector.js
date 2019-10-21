@@ -8,12 +8,18 @@ let gifOutput = '';
 
 const getGif = () => gifOutput;
 
+const clearGif = () => {
+  gifOutput = '';
+  return gifOutput;
+};
+
 const printGif = (gifCode) => {
   $('#selectGifBtn').hide();
   $('#gifSearchResults').html('');
   $('#giphyModal').modal('hide');
   $('#gifBtn').hide();
   $('#gifAttached').show();
+  $('#message').prop('required', false);
   gifOutput = `
   <iframe src="https://giphy.com/embed/${gifCode}" width="100%" height="100%" frameBorder="0" allowFullScreen></iframe>
   `;
@@ -29,20 +35,22 @@ const selectGif = (e) => {
 };
 
 const searchGifs = () => {
-  let gifString = '';
-  for (let i = 0; i < 10; i += 1) {
-    gifString += `
+  if ($('#gifSearchTerm').val() !== '') {
+    let gifString = '';
+    for (let i = 0; i < 10; i += 1) {
+      gifString += `
       <img class='cardImg gifOptions m-1' id='${giphyIds[i]}' src='https://media.giphy.com/media/${giphyIds[i]}/giphy.gif' />
-    `;
+      `;
+    }
+    utilities.printToDom('gifSearchResults', gifString);
+    setTimeout(() => $('#gifSearchTerm').val(''), 50);
   }
-  utilities.printToDom('gifSearchResults', gifString);
-  setTimeout(() => $('#gifSearchTerm').val(''), 50);
 };
 
 const printModal = () => {
   const modalString = `
     <div class="modal fade" id="giphyModal" tabindex="-1" role="dialog" aria-labelledby="giphyModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title" id="giphyModalTitle">Find a Gif <span>powered by Giphy</span></h5>
@@ -78,4 +86,4 @@ const printModal = () => {
   });
 };
 
-export default { printModal, getGif };
+export default { printModal, getGif, clearGif };
