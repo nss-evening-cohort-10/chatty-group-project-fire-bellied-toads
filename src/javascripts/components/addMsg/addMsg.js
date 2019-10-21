@@ -3,7 +3,7 @@ import moment from 'moment';
 import displayMsgs from '../displayMsgs/displayMsgs';
 import messageData from '../../helpers/data/messageData';
 import utilities from '../../helpers/utilities';
-
+import emojis from '../emoji/emojiAppender';
 import './addMsg.scss';
 
 const clearForm = () => {
@@ -12,11 +12,13 @@ const clearForm = () => {
 };
 
 const addMessage = (e) => {
+  const message = $('#message').val();
+  const username = $('#username').val();
   if (e.which === 13 || e.target.id === 'sendBtn') {
-    if ($('#username').val() !== '' && $('#message').val() !== '') {
+    if (username !== '' && message !== '') {
       const newMsgObj = {};
-      newMsgObj.name = $('#username').val();
-      newMsgObj.message = $('#message').val();
+      newMsgObj.name = username;
+      newMsgObj.message = emojis.findEmoji(message);
       newMsgObj.timeStamp = moment().format('llll');
       const newArr = messageData.getMessage();
       newArr.unshift(newMsgObj);
