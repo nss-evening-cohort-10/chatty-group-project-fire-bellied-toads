@@ -1,9 +1,74 @@
 @import '../../../styles/colors';
 
 nav{
-  background-color: $lightOrange !important;
+  background-color: var(--heading-color);
   box-shadow: 2px 1px 1px rgba($color: #000000, $alpha: .5);
   img {
     width:100% !important;
+  }
+
+  .custom-control-label::before{
+    background-color: $darkLightGreen;
+    border: $froggyGreen solid 1px;
+  }
+
+  .custom-switch .custom-control-label::after {
+    background-color: $froggyGreen;
+  }
+
+  .custom-switch .custom-control-input:checked~.custom-control-label::before{
+    background-color:black;
+    border: $darkLightGreen solid 1px;
+  }
+
+  .icon {
+    color: var(--heading-icons);
+    margin-right: 1.5em;
+  }
+
+  #formRow2{
+    margin-left: -15px;
+  }
+
+  #username{
+    padding-left: 12px;
+  }
+
+  #clearBtn, #sendBtn {
+    position: absolute;
+    right: 5px;
+  }
+
+}
+
+@media screen and (max-width: 715px){
+  .navbar{   
+    button{
+      font-size: .75rem!important;
+    }
+  }
+}
+
+@media screen and (max-width: 414px){
+  .navbar{ 
+    #logoDiv{
+      min-width: 75vw!important;
+      margin: 0 auto;
+      padding-bottom: 5px;
+    }
+
+    #formDiv{
+      min-width: 80vw!important;
+      margin: 0 auto;
+    }
+
+    button{
+      font-size: .5rem!important;
+      
+      &#sendBtn, &#updateBtn{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 }

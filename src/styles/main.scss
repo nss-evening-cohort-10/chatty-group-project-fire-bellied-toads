@@ -1,4 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+
 body {
-  background-color: #FBF0C6;
+  background-color: var(--bg-color);
+}
+
+audio {
+  display: none;
 }

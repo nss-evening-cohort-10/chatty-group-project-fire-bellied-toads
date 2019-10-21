@@ -1,3 +1,28 @@
 $lightYellow: #FBF0C6;
 $lightOrange: #FAD4A7;
 $froggyGreen: #50641d;
+
+
+$darkBlack: #212121;
+$darkLightGreen: #C8E6C9;
+$darkOrange: #FF5252;
+$darkGreen: #388E3C;
+$darkGray: #455A64;
+
+:root {
+  --primary-color: #50641d;
+  --secondary-color: #FAD4A7;
+  --bg-color: #FBF0C6;
+  --font-color: black;
+  --heading-color: #FAD4A7;
+  --heading-icons: black;
+}
+
+[data-theme='dark'] {
+  --primary-color: #FF5252;
+  --secondary-color: #212121;
+  --bg-color: #455A64;
+  --font-color: #C8E6C9;
+  --heading-color: #212121;
+  --heading-icons: #C8E6C9;
+}
