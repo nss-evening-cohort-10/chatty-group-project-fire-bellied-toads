@@ -2,7 +2,7 @@ import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import './gifSelector.scss';
 
-const giphyIds = ['ZVik7pBtu9dNS', 'ZG719ozZxGuThHBckn', 'QHE5gWI0QjqF2', 'Xj3EJNeQHFQ5i', '3oKIPnAiaMCws8nOsE', 'zOvBKUUEERdNm', '13UZisxBxkjPwI', 'nGMnDqebzDcfm', 'ZFbvG2eF923te', '5ntdy5Ban1dIY'];
+let giphyIds = [];
 let giphyCode = '';
 let gifOutput = '';
 
@@ -11,6 +11,21 @@ const getGif = () => gifOutput;
 const clearGif = () => {
   gifOutput = '';
   return gifOutput;
+};
+
+const sortData = (giphy) => {
+  for (let n = 0; n < 10; n += 1) {
+    giphyIds.push(giphy.data[n].id);
+  }
+};
+
+const searchGiphy = () => {
+  const searchTerm = $('#gifSearchTerm').val().replace(' ', '+');
+  console.log(searchTerm);
+  const url = `
+    http://api.giphy.com/v1/gifs/search?&api_key=YdazyFlfiiIEP6hKfrZQMtgytf2CMG9A&q=${searchTerm}
+  `;
+  $.getJSON(url, sortData);
 };
 
 const printGif = (gifCode) => {
@@ -36,6 +51,9 @@ const selectGif = (e) => {
 
 const searchGifs = () => {
   if ($('#gifSearchTerm').val() !== '') {
+    giphyIds = [];
+    searchGiphy();
+    console.log(giphyIds);
     let gifString = '';
     for (let i = 0; i < 10; i += 1) {
       gifString += `
