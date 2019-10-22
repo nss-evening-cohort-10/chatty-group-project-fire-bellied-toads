@@ -39,6 +39,16 @@ nav{
     right: 5px;
   }
 
+  #colorPicker {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    font-size: 80%;
+    bottom: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 715px){
@@ -60,6 +70,12 @@ nav{
     #formDiv{
       min-width: 80vw!important;
       margin: 0 auto;
+    }
+
+    #colorPicker {
+      right: 0;
+      height: 20px;
+      width: 20px;
     }
 
     button{

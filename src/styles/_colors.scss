@@ -26,3 +26,21 @@ $darkGray: #455A64;
   --heading-color: #212121;
   --heading-icons: #C8E6C9;
 }
+
+[data-theme='pink'] {
+  --primary-color: #C2185B;
+  --secondary-color: #FF4081;
+  --bg-color: #F8BBD0;
+  --font-color: #212121;
+  --heading-color: #FF4081;
+  --heading-icons: #212121;
+}
+
+[data-theme='swamp'] {
+  --primary-color: #795548;
+  --secondary-color: #AFB42B;
+  --bg-color: #F0F4C3;
+  --font-color: #212121;
+  --heading-color: #AFB42B;
+  --heading-icons: #212121;
+}
