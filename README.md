@@ -14,20 +14,20 @@ Toad Talk is a messaging application that allows the user to enter their name an
 
 ## Screenshots
 Display on page load:
-![on load](https://raw.githubusercontent.com/aclai4067/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/screenshots/toadTalk-load.png)
+![on load](https://raw.githubusercontent.com/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/master/screenshots/toadTalk-load.png)
 
 Dark Mode with large font:
-![dark mode and large font](https://raw.githubusercontent.com/aclai4067/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/screenshots/toadTalk-dark-largeFont.png)
+![dark mode and large font](https://raw.githubusercontent.com/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/master/screenshots/toadTalk-dark-largeFont.png)
 
 Themes:
-![rose garden theme](https://raw.githubusercontent.com/aclai4067/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/screenshots/toadTalk-theme-rosey.png)
-![swampy theme](https://raw.githubusercontent.com/aclai4067/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/screenshots/toadTalk-theme-swampy.png)
+![rose garden theme](https://raw.githubusercontent.com/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/master/screenshots/toadTalk-theme-rosey.png)
+![swampy theme](https://raw.githubusercontent.com/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/master/screenshots/toadTalk-theme-swampy.png)
 
 Gif Search:
-![gif modal](https://raw.githubusercontent.com/aclai4067/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/screenshots/toadTalk-gifs.png)
+![gif modal](https://raw.githubusercontent.com/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/master/screenshots/toadTalk-gifs.png)
 
 Emojis and Gifs:
-![emojis and gifs](https://raw.githubusercontent.com/aclai4067/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/screenshots/toadTalk-gifs-emojis.png)
+![emojis and gifs](https://raw.githubusercontent.com/nss-evening-cohort-10/chatty-group-project-fire-bellied-toads/master/screenshots/toadTalk-gifs-emojis.png)
 
 
 ## Instructions for how to run the project
