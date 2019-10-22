@@ -1,0 +1,17 @@
+
+@import '../../../styles/colors';
+
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid $froggyGreen;
+}
+
+.custom-radio .custom-control-input:active ~ .custom-control-label::before {
+  color: #fff;
+  background-color: $darkOrange;
+}
+
+label {
+  color: var(--font-color);
+}
