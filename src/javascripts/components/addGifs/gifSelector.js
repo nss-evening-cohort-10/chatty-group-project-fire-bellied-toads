@@ -21,7 +21,6 @@ const sortData = (giphy) => {
 
 const searchGiphy = () => {
   const searchTerm = $('#gifSearchTerm').val().replace(' ', '+');
-  console.log(searchTerm);
   const url = `
     https://api.giphy.com/v1/gifs/search?&q=${searchTerm}&api_key=YdazyFlfiiIEP6hKfrZQMtgytf2CMG9A&limit=10
   `;
@@ -53,7 +52,6 @@ const searchGifs = () => {
   if ($('#gifSearchTerm').val() !== '') {
     giphyIds = [];
     searchGiphy();
-    console.log(giphyIds);
     setTimeout(() => {
       let gifString = '';
       for (let i = 0; i < 10; i += 1) {

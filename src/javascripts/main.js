@@ -12,6 +12,7 @@ import darkMode from './components/darkMode/darkMode';
 import gifs from './components/addGifs/gifSelector';
 import textSize from './components/textSize/textSize';
 import ribbet from './components/ribbet/ribbet';
+import themes from './components/themes/themes';
 
 const msgArray = data.getMessage();
 
@@ -27,6 +28,8 @@ const init = () => {
   darkMode.makeDark();
   textSize.makeBig();
   ribbet.printSound();
+  themes.printThemeOptions();
+  themes.swapTheme();
 };
 
 init();

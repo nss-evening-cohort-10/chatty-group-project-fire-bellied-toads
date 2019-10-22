@@ -33,9 +33,13 @@ const printNav = () => {
                 <input type="checkbox" class="custom-control-input" id="textSize">
                 <label class="custom-control-label" for="textSize"><i class="fas fa-text-height icon" alt="enlarge text"></i></label>
               </div>
+              <button id="colorPicker" class="btn btn-dark" type="button" data-toggle="collapse" data-target="#themePicker"     aria-expanded="false" aria-controls="themePicker">
+                <i class="fas fa-palette" id="pallet"></i>
+              </button>
             </div>
             <button type="button" id="clearBtn" class="btn btn-outline-dark col-2">CLEAR</button>
           </div>
+          <div class="collapse" id="themePicker"></div>
         </form>
         </div>  
       </nav>
