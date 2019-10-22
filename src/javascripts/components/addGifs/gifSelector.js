@@ -23,7 +23,7 @@ const searchGiphy = () => {
   const searchTerm = $('#gifSearchTerm').val().replace(' ', '+');
   console.log(searchTerm);
   const url = `
-    http://api.giphy.com/v1/gifs/search?&api_key=YdazyFlfiiIEP6hKfrZQMtgytf2CMG9A&q=${searchTerm}
+    https://api.giphy.com/v1/gifs/search?&q=${searchTerm}&api_key=YdazyFlfiiIEP6hKfrZQMtgytf2CMG9A&limit=10
   `;
   $.getJSON(url, sortData);
 };
@@ -54,14 +54,16 @@ const searchGifs = () => {
     giphyIds = [];
     searchGiphy();
     console.log(giphyIds);
-    let gifString = '';
-    for (let i = 0; i < 10; i += 1) {
-      gifString += `
-      <img class='cardImg gifOptions m-1' id='${giphyIds[i]}' src='https://media.giphy.com/media/${giphyIds[i]}/giphy.gif' />
-      `;
-    }
-    utilities.printToDom('gifSearchResults', gifString);
-    setTimeout(() => $('#gifSearchTerm').val(''), 50);
+    setTimeout(() => {
+      let gifString = '';
+      for (let i = 0; i < 10; i += 1) {
+        gifString += `
+        <img class='cardImg gifOptions m-1' id='${giphyIds[i]}' src='https://media.giphy.com/media/${giphyIds[i]}/giphy.gif' />
+        `;
+      }
+      utilities.printToDom('gifSearchResults', gifString);
+      $('#gifSearchTerm').val('');
+    }, 250);
   }
 };
 
