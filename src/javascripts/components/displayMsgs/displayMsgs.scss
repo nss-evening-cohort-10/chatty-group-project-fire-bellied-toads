@@ -60,13 +60,16 @@
 }
 
 @media screen and (max-height: 823px){
-    #msgDiv{
-        margin-top: 34vh;
-    }
-
-    @media screen and (max-height: 678px){
+    @media screen and (max-width: 830px){
         #msgDiv{
-            margin-top: 40vh;
+            margin-top: 34vh;
+        }
+    
+
+        @media screen and (max-height: 678px){
+            #msgDiv{
+                margin-top: 40vh;
+            }
         }
 
         @media screen and (min-width: 400px){

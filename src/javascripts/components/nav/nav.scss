@@ -26,7 +26,12 @@ nav{
     margin-right: 1.5em;
   }
 
+  #toggleSend{
+    margin-bottom: 5px;
+  }
+
   #formRow2{
+    margin-bottom: 8px;
     margin-left: -15px;
   }
 
@@ -34,11 +39,37 @@ nav{
     padding-left: 12px;
   }
 
-  #clearBtn, #sendBtn {
+  #clearBtn, #sendBtn, #updateBtn {
     position: absolute;
     right: 5px;
   }
 
+  #gifBtnDiv{
+    padding-left: 0;
+
+    #gifAttached{
+      display: none;
+    }
+    #gifBtn{
+      background-color: white;
+      border-radius: 0 5px 5px 0;
+
+      &:hover{
+        background-color: #6c757d;
+      }
+    }
+  }
+
+  #colorPicker {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    font-size: 80%;
+    bottom: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 715px){
@@ -60,6 +91,12 @@ nav{
     #formDiv{
       min-width: 80vw!important;
       margin: 0 auto;
+    }
+
+    #colorPicker {
+      right: 0;
+      height: 20px;
+      width: 20px;
     }
 
     button{

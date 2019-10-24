@@ -11,6 +11,7 @@ const makeMessage = (msg, counter) => {
       </div>
       <div class='msgBody col-md-8'>
         <p>${msg[counter].message}</p>
+        <div id='gifContainer'>${msg[counter].gif}</div>
       </div>
       <div class='modifyMsg row col-md-1'>
         <button type='button' id='del${counter}' class='col-5 delete offset-1'>X</button>

@@ -9,6 +9,13 @@ const makeDark = () => {
       $('#clearBtn').removeClass('btn-outline-dark');
       $('#navImg2').show();
       $('#navImg').hide();
+      if ($('#pinkTheme').is(':checked')) {
+        $('#pinkTheme').prop('checked', false);
+      } else if ($('#swampTheme').is(':checked')) {
+        $('#swampTheme').prop('checked', false);
+      } else if ($('#defaultTheme').is(':checked')) {
+        $('#defaultTheme').prop('checked', false);
+      }
     } else {
       $('body').attr('data-theme', 'light');
       $('#clearBtn').addClass('btn-outline-dark');
