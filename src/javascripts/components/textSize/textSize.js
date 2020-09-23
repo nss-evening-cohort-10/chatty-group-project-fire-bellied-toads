@@ -15,5 +15,4 @@ const makeBig = () => {
   });
 };
 
-
 export default { makeBig, enlarge };
