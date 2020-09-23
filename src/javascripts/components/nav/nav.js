@@ -1,14 +1,18 @@
 import $ from 'jquery';
 import utilities from '../../helpers/utilities';
 import './nav.scss';
+import toadLogo from '../../../assets/images/toadtalk.png';
+import darkLogo from '../../../assets/images/toadtalkdarkmode.png';
+import toadLogoStacked from '../../../assets/images/toadTalkStacked.png';
+import toadLogoStackedDark from '../../../assets/images/toadTalkStackedDarkMode.png';
 
 const printNav = () => {
   let domString = '';
   domString = `
       <nav class="navbar fixed-top row d-flex flex-wrap">
         <div id='logoDiv' class="col-2">
-          <img id="navImg" src="/src/assets/images/toadtalk.png" alt="ToadTalk Logo">
-          <img id="navImg2" src="/src/assets/images/toadTalkDarkMode.png" alt="ToadTalk Logo">
+          <img id="navImg" src=${toadLogo} alt="ToadTalk Logo">
+          <img id="navImg2" src=${darkLogo} alt="ToadTalk Logo">
         </div>
         <div id='formDiv' class="col-10">
         <form onsubmit='return false'>
@@ -50,11 +54,11 @@ const printNav = () => {
 
 const logoSwap = () => {
   if ($(window).innerWidth() < 800 && $(window).innerWidth() > 414) {
-    $('#navImg').attr('src', '/src/assets/images/toadTalkStacked.png');
-    $('#navImg2').attr('src', '/src/assets/images/toadTalkStackedDarkMode.png');
+    $('#navImg').attr('src', toadLogoStacked);
+    $('#navImg2').attr('src', toadLogoStackedDark);
   } else if ($(window).innerWidth() >= 800 || $(window).innerWidth() <= 414) {
-    $('#navImg').attr('src', '/src/assets/images/toadtalk.png');
-    $('#navImg2').attr('src', '/src/assets/images/toadTalkDarkMode.png');
+    $('#navImg').attr('src', toadLogo);
+    $('#navImg2').attr('src', darkLogo);
   }
 };
 
